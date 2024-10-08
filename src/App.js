@@ -19,8 +19,8 @@ import FacultyForgotPassword from './components/FacultyForgotPassword/FacultyFor
 
 const App = () => {
   return (
-    <Router>
-      {/* Conditionally render the Header */}
+    <Router basename="/student-feedback-frontend"> {/* Set the basename for GitHub Pages */}
+       {/* Render the Header */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
@@ -28,15 +28,16 @@ const App = () => {
         <Route path="/admin-login" element={<AdminLogin />} />
         <Route path="/student-login" element={<StudentLogin />} />
         <Route path="/admin/*" element={<AdminDashboard />} /> {/* Route for admin dashboard */}
-        <Route path="/student" element={<><StudentDashboard /></>} />
+        <Route path="/student" element={<StudentDashboard />} />
         <Route path="/faculty-dashboard" element={<FacultyDashboard />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/admin-forgot-password" element={<AdminForgotPassword />} />
         <Route path="/feedback" element={<FeedbackPage />} />
         <Route path="/faculty-login" element={<FacultyLogin />} />
         <Route path="/faculty-forgot-password" element={<FacultyForgotPassword />} />
+        <Route path="*" element={<Navigate to="/" />} /> {/* Redirect all unknown routes to Home */}
       </Routes>
-      <Footer />
+      <Footer /> {/* Render the Footer */}
     </Router>
   );
 };

@@ -19,7 +19,7 @@ const Home = () => {
       <div className="home-card">
         <h1 className="home-title">Welcome to the Student Feedback System</h1>
         
-        <img src="/assets/images/home.png" alt="Home" className="home-image" />
+        <img src={`${process.env.PUBLIC_URL}/assets/images/home.png`} alt="Home" className="home-image" />
 
         <div className="home-buttons">
           <button onClick={handleRegister} className="home-button">Register</button>
