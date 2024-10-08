@@ -1,0 +1,17 @@
+.buttons {
+  margin: 20px 0;
+}
+
+.buttons button {
+  margin-right: 10px;
+  padding: 10px 15px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

@@ -1,0 +1,27 @@
+.top-navbar {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-logo {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .navbar-user {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-user span {
+    margin-right: 10px;
+  }
+  
+  .navbar-user i {
+    font-size: 20px;
+  }
+  

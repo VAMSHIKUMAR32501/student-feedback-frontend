@@ -1,0 +1,54 @@
+/* src/components/Classes/ClassList.css */
+.class-list {
+    padding: 20px;
+  }
+  
+  .class-list-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .add-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .class-list-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .class-list-table th, .class-list-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .update-btn, .delete-btn {
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+  }
+  
+  .update-btn {
+    background-color: #ffc107;
+    color: white;
+    border: none;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+  }
+  

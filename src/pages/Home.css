@@ -1,0 +1,81 @@
+/* Center content and add a gradient background */
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #e0dae6, #41587f);
+}
+
+/* Card-style layout for image and buttons */
+.home-card {
+  background-color: white;
+  padding: 25px;
+  border-radius: 80px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+}
+
+/* Add a modern font style, shadow, and padding for the title */
+.home-title {
+  font-family: 'Arial', sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  color: #000000;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+}
+
+/* Ensure the image is responsive */
+.home-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin-bottom: 30px;
+}
+
+/* Button styles with rounded corners, hover effects, and animations */
+.home-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-button {
+  padding: 12px 30px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background-color: #19191a;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.home-button:hover {
+  background-color: #84d671;
+  transform: scale(1.05);
+}
+
+/* Add a smooth animation effect to make the buttons pop */
+.home-button:active {
+  transform: scale(0.98);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-card {
+    padding: 20px;
+  }
+  
+  .home-title {
+    font-size: 28px;
+  }
+  
+  .home-button {
+    font-size: 16px;
+  }
+}

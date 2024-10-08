@@ -1,0 +1,39 @@
+/* src/components/Login/Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%); /* Gradient background */
+}
+
+.login-form {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  width: 300px; /* Set a fixed width */
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Custom font */
+}
+
+.user-button {
+  padding: 10px 20px;
+  background-color: #007bff; /* Blue background */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 0; /* Add margin for spacing */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  width: 100%; /* Full width button */
+}
+
+.user-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

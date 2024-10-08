@@ -1,0 +1,43 @@
+.main-content {
+  padding: 20px;
+  margin-left: 220px; /* Adjust this based on your sidebar width */
+  background-color: #f4f6f8;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.academic-info p {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.stat-box {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
+  text-align: center;
+}
+
+.stat-box p {
+  font-size: 16px;
+  color: #555;
+}
+
+.stat-box h3 {
+  font-size: 32px;
+  margin-top: 10px;
+  color: #007bff;
+}

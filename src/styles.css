@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+
+.header nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.header nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.header nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.app-content {
+  padding: 20px;
+}
+
+.feedback-form {
+  margin: 20px 0;
+}
+
+.feedback-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback-results {
+  margin-top: 20px;
+}

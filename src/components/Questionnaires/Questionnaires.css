@@ -1,0 +1,44 @@
+/* src/components/Questionnaires/Questionnaires.css */
+.questionnaires {
+    padding: 20px;
+  }
+  
+  .questionnaires-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .search-input {
+    width: 200px;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+  .add-btn {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .questionnaires-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .questionnaires-table th, .questionnaires-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+  
+  .action-btn {
+    padding: 5px 10px;
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  

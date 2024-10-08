@@ -1,0 +1,21 @@
+.feedback-analytics {
+    margin: 20px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feedback-item {
+    margin-bottom: 15px;
+  }
+  
+  .feedback-item h5 {
+    color: #4CAF50; /* Green color for course title */
+  }
+  
+  .feedback-item ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding-left: 0; /* Remove left padding */
+  }
+  

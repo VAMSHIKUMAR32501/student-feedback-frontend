@@ -1,0 +1,20 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 5px 0; /* Adjusted padding for a smaller size */
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: -50px; /* Initially hidden */
+  transition: bottom 0.4s ease; /* Smooth slide-up effect */
+  z-index: 1000;
+}
+
+.footer-visible {
+  bottom: 0; /* Slide the footer into view */
+}
+
+.footer p {
+  font-size: 12px; /* Smaller font size */
+  margin: 0;
+}

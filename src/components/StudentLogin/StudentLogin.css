@@ -1,0 +1,74 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f6f8;
+}
+
+.login-form {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+  font-weight: bold;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 14px;
+  margin: 12px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 14px;
+  margin: 10px 0;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.forgot-password-link {
+  margin-top: 15px; /* Space between login button and forgot password link */
+}
+
+.forgot-password-link a {
+  color: #007bff; /* Color for the link */
+  text-decoration: none; /* No underline */
+  font-size: 14px; /* Font size for the link */
+}
+
+.forgot-password-link a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+.captcha-error-message {
+  color: red; /* Change this to your preferred error color */
+  margin-top: 10px; /* Space between the input and error message */
+  font-size: 14px; /* Font size for the error message */
+}
