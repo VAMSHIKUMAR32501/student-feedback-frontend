@@ -2,7 +2,7 @@
 import axios from 'axios';
 
 // Ensure the API URL is correct and can be replaced based on the environment
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:32501/api/auth'; // Use an environment variable for flexibility
+const API_URL = process.env.REACT_APP_API_URL || 'https://feedback-system-backend32501.up.railway.app/api/auth'; // Use an environment variable for flexibility
 
 // Function to fetch dashboard data
 export const fetchDashboardData = async () => {

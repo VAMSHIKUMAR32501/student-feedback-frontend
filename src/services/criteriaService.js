@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API_URL = 'http://localhost:32501/api/criteria'; // Adjust based on your backend URL
+const API_URL = 'https://feedback-system-backend32501.up.railway.app/api/criteria'; // Adjust based on your backend URL
 
 // Centralized error handling
 const handleError = (error) => {

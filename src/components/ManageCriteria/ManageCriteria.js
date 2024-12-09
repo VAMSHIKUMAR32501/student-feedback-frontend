@@ -17,7 +17,7 @@ const ManageCriteria = () => {
 
   const fetchCriteria = async () => {
     try {
-      const response = await axios.get('http://localhost:32501/api/criteria');
+      const response = await axios.get('https://feedback-system-backend32501.up.railway.app/api/criteria');
       setCriteriaList(response.data);
     } catch (error) {
       console.error('Error fetching criteria:', error);
@@ -28,7 +28,7 @@ const ManageCriteria = () => {
   const handleAddCriteria = async () => {
     if (!newCriteria) return;
     try {
-      const response = await axios.post('http://localhost:32501/api/criteria', { name: newCriteria });
+      const response = await axios.post('https://feedback-system-backend32501.up.railway.app/api/criteria', { name: newCriteria });
       setCriteriaList([...criteriaList, response.data]);
       setNewCriteria('');
       toast.success('Criteria added successfully!');
@@ -41,7 +41,7 @@ const ManageCriteria = () => {
   const handleDeleteCriteria = async (id) => {
     if (!window.confirm('Are you sure you want to delete this criteria?')) return;
     try {
-      await axios.delete(`http://localhost:32501/api/criteria/${id}`);
+      await axios.delete(`https://feedback-system-backend32501.up.railway.app/api/criteria/${id}`);
       setCriteriaList(criteriaList.filter((criteria) => criteria.id !== id));
       setSelectedCriteria(null);
       setQuestionList([]);
@@ -55,7 +55,7 @@ const ManageCriteria = () => {
   const handleSelectCriteria = async (criteria) => {
     setSelectedCriteria(criteria);
     try {
-      const response = await axios.get(`http://localhost:32501/api/criteria/${criteria.id}/questions`);
+      const response = await axios.get(`https://feedback-system-backend32501.up.railway.app/api/criteria/${criteria.id}/questions`);
       setQuestionList(response.data);
     } catch (error) {
       console.error('Error fetching questions:', error);
@@ -66,7 +66,7 @@ const ManageCriteria = () => {
   const handleAddQuestion = async () => {
     if (!newQuestion) return;
     try {
-      const response = await axios.post(`http://localhost:32501/api/criteria/${selectedCriteria.id}/questions`, { question: newQuestion });
+      const response = await axios.post(`https://feedback-system-backend32501.up.railway.app/api/criteria/${selectedCriteria.id}/questions`, { question: newQuestion });
       setQuestionList([...questionList, response.data]);
       setNewQuestion('');
       toast.success('Question added successfully!');
@@ -79,7 +79,7 @@ const ManageCriteria = () => {
   const handleDeleteQuestion = async (questionId) => {
     if (!window.confirm('Are you sure you want to delete this question?')) return;
     try {
-      await axios.delete(`http://localhost:32501/api/questions/${questionId}`);
+      await axios.delete(`https://feedback-system-backend32501.up.railway.app/api/questions/${questionId}`);
       setQuestionList(questionList.filter((question) => question.id !== questionId));
       toast.success('Question deleted successfully!');
     } catch (error) {

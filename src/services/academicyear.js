@@ -1,7 +1,7 @@
 import axios from 'axios';
 const { ToastContainer, toast } = require('react-toastify');
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:32501/api/academic-years';
+const API_URL = process.env.REACT_APP_API_URL || 'https://feedback-system-backend32501.up.railway.app/api/academic-years';
 
 // Handle errors centrally
 const handleError = (error) => {

@@ -16,12 +16,12 @@ const Subjects = () => {
   }, []);
 
   const fetchSubjects = async () => {
-    const response = await axios.get('http://localhost:32501/api/subjects');
+    const response = await axios.get('https://feedback-system-backend32501.up.railway.app/api/subjects');
     setSubjects(response.data);
   };
 
   const handleDelete = async (id) => {
-    await axios.delete(`http://localhost:32501/api/subjects/${id}`);
+    await axios.delete(`https://feedback-system-backend32501.up.railway.app/api/subjects/${id}`);
     fetchSubjects(); // Refresh the subjects list
   };
 
@@ -31,7 +31,7 @@ const Subjects = () => {
 
   const handleAddSubject = async () => {
     if (newSubject.courseCode && newSubject.subjectName) {
-      await axios.post('http://localhost:32501/api/subjects', newSubject);
+      await axios.post('https://feedback-system-backend32501.up.railway.app/api/subjects', newSubject);
       resetSubjectForm();
       fetchSubjects(); // Refresh the subjects list
       setIsAddModalOpen(false); // Close modal after adding
@@ -40,7 +40,7 @@ const Subjects = () => {
 
   const handleUpdateSubject = async () => {
     if (newSubject.courseCode && newSubject.subjectName) {
-      await axios.put(`http://localhost:32501/api/subjects/${currentSubjectId}`, newSubject);
+      await axios.put(`https://feedback-system-backend32501.up.railway.app/api/subjects/${currentSubjectId}`, newSubject);
       resetSubjectForm();
       fetchSubjects(); // Refresh the subjects list
       setIsUpdateModalOpen(false); // Close modal after updating

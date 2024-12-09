@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = 'http://localhost:32501/api/ratings';
+const BASE_URL = 'https://feedback-system-backend32501.up.railway.app/api/ratings';
 
 // Save ratings function
 export const saveRatings = async (criteriaId, payload) => {
