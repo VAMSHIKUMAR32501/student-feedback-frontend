@@ -1,0 +1,72 @@
+/* ManageQuestionnaire.css */
+
+/* General Styles */
+.container {
+    margin-top: 20px;
+  }
+  
+  /* Paper styles */
+  .paper {
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* Question Form */
+  .question-form {
+    margin-right: 16px;
+    flex: 1;
+  }
+  
+  .text-field {
+    margin-bottom: 16px;
+  }
+  
+  .save-button {
+    margin-top: 16px;
+  }
+  
+  /* Rating Legend */
+  .rating-legend {
+    margin-bottom: 32px;
+  }
+  
+  .grid-item {
+    padding: 8px;
+  }
+  
+  /* Question List */
+  .question-list {
+    margin-top: 24px;
+  }
+  
+  .criteria-title {
+    margin-bottom: 16px;
+  }
+  
+  .question-item {
+    margin-bottom: 24px;
+  }
+  
+  .radio-group {
+    margin-top: 8px;
+  }
+  
+  .evaluation-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .evaluation-buttons {
+    margin-left: auto;
+  }
+  
+  .divider {
+    margin: 16px 0;
+  }
+  

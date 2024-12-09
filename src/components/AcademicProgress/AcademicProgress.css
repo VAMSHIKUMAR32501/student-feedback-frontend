@@ -1,0 +1,77 @@
+/* AcademicProgress.css */
+.academic-progress-container {
+    padding: 24px;
+    background-color: #f5f7fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .academic-progress-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .progress-card {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .metric-container {
+    text-align: center;
+    padding: 16px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin: 10px 0;
+  }
+  
+  .metric-icon {
+    color: #007bff;
+    margin-bottom: 10px;
+  }
+  
+  .metric-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin: 8px 0;
+  }
+  
+  .progress-bar {
+    height: 6px;
+    border-radius: 4px;
+    margin-top: 8px;
+  }
+  
+  .recent-feedback-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .feedback-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .feedback-subject {
+    font-size: 1rem;
+    color: #444;
+  }
+  
+  .feedback-score {
+    font-weight: 600;
+  }
+  

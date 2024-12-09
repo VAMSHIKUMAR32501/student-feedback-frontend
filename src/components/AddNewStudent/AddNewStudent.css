@@ -1,0 +1,15 @@
+.page-title {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+  }
+  
+  .submit-button {
+    background-color: #1976d2;
+    color: #fff;
+  }
+  
+  .submit-button:hover {
+    background-color: #1565c0;
+  }
+  

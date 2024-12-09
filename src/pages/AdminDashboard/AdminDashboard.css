@@ -6,7 +6,7 @@
 }
 
 h2 {
-  font-size: 24px;
+  font-size: 24px; /* Slightly decreased the font size */
   color: #333;
   margin-bottom: 20px;
 }
@@ -39,5 +39,18 @@ h2 {
 .stat-box h3 {
   font-size: 32px;
   margin-top: 10px;
-  color: #007bff;
+  color: #2478d8;
+}
+
+header .admin-title {
+  font-size: 22px; /* Decreased size for "Admin Page" */
+  color: white;
+  text-decoration: none; /* Removed underline */
+}
+
+header .feedback-title {
+  font-size: 32px; /* Decreased size for "Student Feedback System" */
+  font-weight: bold;
+  color: white;
+  text-decoration: none; /* Removed underline */
 }

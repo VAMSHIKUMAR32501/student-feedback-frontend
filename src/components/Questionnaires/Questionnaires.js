@@ -1,44 +1,34 @@
-// src/components/Questionnaires/Questionnaires.js
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Questionnaires.css';
+import { AcademicYearContext } from '../../context/AcademicYearContext';
 
 const Questionnaires = () => {
-  const [questionnaires, setQuestionnaires] = useState([
-    { id: 1, academicYear: "2021-2022", semester: 1, questions: 3, answered: 2 },
-    { id: 2, academicYear: "2020-2021", semester: 1, questions: 3, answered: 3 },
-    { id: 3, academicYear: "2019-2020", semester: 2, questions: 0, answered: 0 },
-    { id: 4, academicYear: "2019-2020", semester: 1, questions: 0, answered: 0 }
-  ]);
-
-  const [searchTerm, setSearchTerm] = useState("");
+  const { academicYears, loading } = useContext(AcademicYearContext); // Access academic years from context
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
   };
 
-  const handleAddNewQuestionnaire = () => {
-    const newQuestionnaire = {
-      id: questionnaires.length + 1,
-      academicYear: `New Year ${questionnaires.length + 1}`,
-      semester: 1,
-      questions: 0,
-      answered: 0
-    };
-    setQuestionnaires([...questionnaires, newQuestionnaire]);
+  const handleManage = (id) => {
+    navigate(`/admin/manage-questionnaire/${id}`);
   };
 
   return (
     <div className="questionnaires">
       <div className="questionnaires-header">
-        <input 
+        <input
           type="text"
-          placeholder="Search..." 
+          placeholder="Search..."
           value={searchTerm}
           onChange={handleSearchChange}
           className="search-input"
         />
-        <button className="add-btn" onClick={handleAddNewQuestionnaire}>+ Add New</button>
       </div>
+
+      {loading && <p>Loading academic years...</p>}
 
       <table className="questionnaires-table">
         <thead>
@@ -52,19 +42,27 @@ const Questionnaires = () => {
           </tr>
         </thead>
         <tbody>
-          {questionnaires.filter(q => q.academicYear.toLowerCase().includes(searchTerm.toLowerCase()))
-            .map((q, index) => (
-              <tr key={q.id}>
+          {academicYears
+            .filter((year) =>
+              year.year.toLowerCase().includes(searchTerm.toLowerCase())
+            )
+            .map((year, index) => (
+              <tr key={year.id}>
                 <td>{index + 1}</td>
-                <td>{q.academicYear}</td>
-                <td>{q.semester}</td>
-                <td>{q.questions}</td>
-                <td>{q.answered}</td>
+                <td>{year.year}</td>
+                <td>{year.semester}</td>
+                <td>0</td>
+                <td>0</td>
                 <td>
-                  <button className="action-btn">Action</button>
+                  <button
+                    className="action-btn"
+                    onClick={() => handleManage(year.id)}
+                  >
+                    Manage
+                  </button>
                 </td>
               </tr>
-          ))}
+            ))}
         </tbody>
       </table>
     </div>

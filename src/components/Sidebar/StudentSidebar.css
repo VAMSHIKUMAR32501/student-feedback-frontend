@@ -1,0 +1,32 @@
+.sidebar {
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .MuiListItem-root {
+    border-radius: 8px;
+    margin-bottom: 4px;
+    transition: all 0.2s ease;
+  }
+  
+  .MuiListItem-root:hover {
+    background-color: #f1f5f9;
+  }
+  
+  .MuiListItem-root.Mui-selected {
+    background-color: #e0e7ff !important;
+    color: #4f46e5;
+  }
+  
+  .MuiListItem-root.Mui-selected:hover {
+    background-color: #e0e7ff !important;
+  }
+  
+  .MuiDivider-root {
+    margin: 16px 0;
+  }
+  
+  .MuiListItemText-primary {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }

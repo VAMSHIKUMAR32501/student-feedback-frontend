@@ -1,30 +1,39 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import Captcha from 'react-captcha-code';
-import './StudentLogin.css'; // Ensure you import your CSS file
+import './StudentLogin.css';
+import { login } from '../../services/api'; 
 
 const StudentLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [generatedCode, setGeneratedCode] = useState('');
-  const [captchaError, setCaptchaError] = useState(false); // State for captcha error
+  const [captchaError, setCaptchaError] = useState(false);
+  const [error, setError] = useState('');
 
   const navigate = useNavigate();
 
   const handleCaptchaChange = (code) => {
     setGeneratedCode(code);
-    setCaptchaError(false); // Reset error when captcha is generated
+    setCaptchaError(false); 
   };
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    if (captchaCode === generatedCode) {
-      console.log('Captcha matched. Proceed with login...');
-      navigate('/student'); // Navigate to Student Dashboard upon successful login
-    } else {
-      console.log('Invalid captcha');
-      setCaptchaError(true); // Set error state when captcha is incorrect
+    if (captchaCode !== generatedCode) {
+      setCaptchaError(true);
+      return;
+    }
+
+    try {
+      const response = await login({ email, password ,userType:'student'});
+      console.log('Logged in student:', response);
+
+      // Navigate to the student dashboard if successful
+      navigate('/student');
+    } catch (error) {
+      setError(error.message || 'Login failed. Please check your credentials.');
     }
   };
 
@@ -34,7 +43,7 @@ const StudentLogin = () => {
         <h2>Student Login</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="text"
+            type="email"
             placeholder="Username/Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
@@ -68,9 +77,20 @@ const StudentLogin = () => {
             </div>
           )}
           
+          {error && (
+            <div className="error-message">
+              {error}
+            </div>
+          )}
+          
           <button type="submit" className="login-button">Login</button>
           <div className="forgot-password-link">
-            <a href="/forgot-password">Forgot Password?</a> {/* Link to forgot password page */}
+            <Link to="/forgot-password">Forgot Password?</Link>
+          </div>
+          {/* New Register Link */}
+          <div className="register-link">
+            <span>Don't have an account? </span>
+            <Link to="/register">Register</Link> {/* Link to the register page */}
           </div>
         </form>
       </div>

@@ -1,31 +1,81 @@
+/* Sidebar container styling */
 .sidebar {
-    width: 220px;
-    background-color: #343a40;
-    height: 100vh;
-    position: fixed;
-    top: 50px;
-    left: 0;
-    padding-top: 20px;
-  }
-  
-  .sidebar ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .sidebar ul li {
-    padding: 10px;
-    margin: 10px 0;
-    text-align: center;
-  }
-  
-  .sidebar ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-  }
-  
-  .sidebar ul li:hover {
-    background-color: #007bff;
-  }
-  
+  width: 220px;
+  background-color: #343a40; /* Dark background */
+  height: 100vh;
+  position: fixed;
+  top: 0; /* Adjusted for a fixed position from the top */
+  left: 0;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+/* Heading styling */
+.sidebar h2 {
+  color: white;
+  padding: 10px 16px;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+/* List item styling */
+.sidebar .MuiListItem-root,
+.sidebar .collapsible-trigger {
+  color: white;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebar .MuiListItemText-primary {
+  color: white;
+}
+
+.sidebar .MuiListItem-root:hover,
+.sidebar .collapsible-trigger:hover {
+  background-color: #007bff;
+}
+
+/* Icon styling for list items */
+.sidebar .icon {
+  margin-right: 10px;
+  color: white;
+}
+
+/* Collapsible content section styling */
+.collapsible-content {
+  padding-left: 32px; /* Indentation for nested links */
+  background-color: #3a3f47;
+}
+
+.collapsible-content .MuiListItem-root {
+  padding: 8px 16px;
+  font-size: 0.85rem;
+}
+
+.collapsible-content .MuiListItem-root:hover {
+  background-color: #0056b3; /* Slightly darker for nested links */
+}
+
+/* Link styling */
+.sidebar a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+}
+
+.sidebar a:hover {
+  color: inherit;
+}
+
+/* Expand/Collapse icons */
+.sidebar .expand-icon {
+  color: white;
+}
+

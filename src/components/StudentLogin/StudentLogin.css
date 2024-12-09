@@ -3,72 +3,61 @@
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f4f6f8;
+  background-color: #f4f6f8; /* Light background color */
 }
 
 .login-form {
-  background: #fff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  width: 400px;
-  text-align: center;
+  background: #fff; /* White background for form */
+  padding: 40px; /* Padding around the form */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  width: 400px; /* Fixed width for the form */
+  text-align: center; /* Centered text */
 }
 
 .login-form h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
-  color: #333;
-  font-weight: bold;
+  margin-bottom: 20px; /* Space below heading */
+  font-size: 28px; /* Font size for heading */
+  color: #333; /* Dark text color */
+  font-weight: bold; /* Bold heading */
 }
 
-.login-form input {
-  width: 100%;
-  padding: 14px;
-  margin: 12px 0;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 16px;
+/* Styles for TextField components */
+.MuiTextField-root {
+  margin: 12px 0; /* Space between input fields */
 }
 
-.login-form input:focus {
-  border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  outline: none;
+/* Styles for Button component */
+.MuiButton-root {
+  margin-top: 20px; /* Space above button */
+  padding: 14px; /* Padding inside button */
+  border-radius: 8px; /* Rounded corners for button */
 }
 
-.login-button {
-  width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s ease;
-}
-
-.login-button:hover {
-  background-color: #0056b3;
-}
-
+/* Forgot password link styles */
 .forgot-password-link {
-  margin-top: 15px; /* Space between login button and forgot password link */
+  margin-top: 15px; /* Space between button and link */
 }
 
 .forgot-password-link a {
-  color: #007bff; /* Color for the link */
+  color: #007bff; /* Link color */
   text-decoration: none; /* No underline */
-  font-size: 14px; /* Font size for the link */
+  font-size: 14px; /* Font size for link */
 }
 
 .forgot-password-link a:hover {
   text-decoration: underline; /* Underline on hover */
 }
+
+/* Error message styles */
 .captcha-error-message {
-  color: red; /* Change this to your preferred error color */
-  margin-top: 10px; /* Space between the input and error message */
-  font-size: 14px; /* Font size for the error message */
+  color: red; /* Error message color */
+  margin-top: 10px; /* Space between input and error message */
+  font-size: 14px; /* Font size for error message */
+}
+
+/* General error message styles for FormHelperText */
+.MuiFormHelperText-root {
+  font-size: 14px; /* Font size for error message */
+  margin-top: 10px; /* Space above error message */
 }

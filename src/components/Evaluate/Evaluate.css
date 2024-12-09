@@ -1,0 +1,43 @@
+.evaluate-form {
+  margin: 20px 0;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 60%;
+  margin-left: auto; /* Align to right */
+}
+
+.evaluate-form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.question-block {
+  margin-bottom: 15px;
+}
+
+.rating-options label {
+  margin-right: 15px;
+}
+
+.evaluate-form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.evaluate-form button {
+  background-color: #4CAF50; /* Green background */
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.evaluate-form button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}

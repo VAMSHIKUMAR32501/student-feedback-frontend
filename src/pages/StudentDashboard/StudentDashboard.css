@@ -1,17 +1,158 @@
-.buttons {
-  margin: 20px 0;
+.header-bar {
+  background: linear-gradient(to right, #ffffff, #f8fafc) !important;
+  color: #1a365d !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+  padding: 0.5rem 1rem; /* Reduced padding for a compact look */
 }
 
-.buttons button {
-  margin-right: 10px;
-  padding: 10px 15px;
-  background-color: #007bff; /* Blue background */
-  color: white;
+.student-title {
+  font-size: 1rem; /* Smaller font size */
+  font-weight: 600;
+  color: #1a365d;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem; /* Reduced padding for smaller title */
+  border-radius: 0.25rem; /* More compact border radius */
+  transition: all 0.2s ease;
+}
+
+.student-title:hover {
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.quick-action-btn {
+  transition: all 0.2s ease;
   border: none;
-  border-radius: 5px;
+  background: transparent;
   cursor: pointer;
+  padding: 0.5rem 1rem; /* Reduced padding */
+  border-radius: 0.5rem; /* Slightly smaller border radius */
+  min-width: 100px; /* Reduced minimum width */
 }
 
-.buttons button:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+.quick-action-btn:hover {
+  background-color: #f0f7ff;
+  transform: translateY(-1px);
+}
+
+.quick-action-btn .icon {
+  transition: all 0.2s ease;
+}
+
+.quick-action-btn:hover .icon {
+  color: #2563eb;
+  transform: scale(1.1);
+}
+
+.notification-btn {
+  padding: 6px; /* Reduced padding */
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  background-color: rgba(59, 130, 246, 0.05);
+}
+
+.notification-btn:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  transform: translateY(-1px);
+}
+
+.notifications-menu .MuiPaper-root {
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.notification-item {
+  padding: 0.75rem; /* Reduced padding */
+  border-bottom: 1px solid #f0f0f0;
+  transition: background-color 0.2s ease;
+}
+
+.notification-item:hover {
+  background-color: #f8fafc;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+.profile-menu .MuiPaper-root {
+  min-width: 180px; /* Reduced width */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.profile-menu .MuiMenuItem-root {
+  padding: 0.5rem 1rem; /* Reduced padding */
+  transition: all 0.2s ease;
+}
+
+.profile-menu .MuiMenuItem-root:hover {
+  background-color: #f0f7ff;
+}
+
+.profile-menu .MuiDivider-root {
+  margin: 0.5rem 0;
+}
+
+.avatar-container {
+  position: relative;
+  display: inline-flex;
+  padding: 2px;
+  background: linear-gradient(45deg, #3b82f6, #2563eb);
+  border-radius: 50%;
+}
+
+.avatar-container .MuiAvatar-root {
+  border: 2px solid white;
+}
+
+.user-info {
+  background: rgba(59, 130, 246, 0.05);
+  padding: 0.25rem 0.5rem; /* Reduced padding */
+  border-radius: 0.5rem; /* Smaller border radius */
+  transition: all 0.2s ease;
+}
+
+.user-info:hover {
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.main-content {
+  background-color: #f8fafc;
+  min-height: calc(100vh - 64px);
+  flex-grow: 1;
+  padding: 24px;
+}
+
+.MuiCard-root {
+  transition: all 0.3s ease;
+  border-radius: 1rem;
+  border: 1px solid rgba(229, 231, 235, 0.5);
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.MuiChip-root {
+  font-weight: 500;
+  border-radius: 0.5rem;
+}
+
+.MuiButton-contained {
+  text-transform: none !important;
+  font-weight: 600 !important;
+  border-radius: 0.75rem !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.MuiLinearProgress-root {
+  height: 8px !important;
+  border-radius: 4px !important;
 }

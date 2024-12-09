@@ -1,41 +1,38 @@
 import React from 'react';
 import './Dashboard.css';
 
-const Dashboard = () => {
-  const totalFaculties = 10;
-  const totalStudents = 200;
-  const totalUsers = 215;
-  const totalClasses = 20;
-  const academicYear = "2021-2022";
-  const semester = "1st Semester";
-  const evaluationStatus = "On-going";
+const StatisticBox = ({ label, value }) => (
+  <div className="stat-box">
+    <p>{label}</p>
+    <h3>{value || 0}</h3> {/* Default to 0 if value is null or undefined */}
+  </div>
+);
 
+const Dashboard = ({
+  totalFaculties,
+  totalStudents,
+  totalUsers,
+  totalClasses,
+  academicYear,
+  semester,
+  evaluationStatus,
+}) => {
   return (
-    <div>
+    <div className="dashboard-container">
       <h2>Admin Dashboard</h2>
-      <div className="academic-info">
-        <p>Academic Year: {academicYear}</p>
-        <p>Semester: {semester}</p>
-        <p>Evaluation Status: {evaluationStatus}</p>
-      </div>
-      <div className="statistics">
-        <div className="stat-box">
-          <p>Total Faculties</p>
-          <h3>{totalFaculties}</h3>
-        </div>
-        <div className="stat-box">
-          <p>Total Students</p>
-          <h3>{totalStudents}</h3>
-        </div>
-        <div className="stat-box">
-          <p>Total Users</p>
-          <h3>{totalUsers}</h3>
-        </div>
-        <div className="stat-box">
-          <p>Total Classes</p>
-          <h3>{totalClasses}</h3>
-        </div>
-      </div>
+      
+      <section className="academic-info">
+        <p><strong>Academic Year:</strong> {academicYear || 'N/A'}</p>
+        <p><strong>Semester:</strong> {semester || 'N/A'}</p>
+        <p><strong>Evaluation Status:</strong> {evaluationStatus || 'N/A'}</p>
+      </section>
+      
+      <section className="statistics">
+        <StatisticBox label="Total Faculties" value={totalFaculties} />
+        <StatisticBox label="Total Students" value={totalStudents} />
+        <StatisticBox label="Total Users" value={totalUsers} />
+        <StatisticBox label="Total Classes" value={totalClasses} />
+      </section>
     </div>
   );
 };

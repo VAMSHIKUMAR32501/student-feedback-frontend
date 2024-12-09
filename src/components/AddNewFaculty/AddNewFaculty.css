@@ -1,0 +1,56 @@
+/* src/pages/Faculties/AddNewFaculty.css */
+
+.add-new-faculty {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-new-faculty h4 {
+    text-align: center;
+    color: #333;
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  
+  .add-new-faculty form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .add-new-faculty .MuiTextField-root {
+    margin-bottom: 16px;
+  }
+  
+  #avatar-upload + label {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .avatar-preview {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .avatar-preview .MuiAvatar-root {
+    width: 100px;
+    height: 100px;
+    border: 2px solid #ddd;
+  }
+  
+  .MuiButton-root {
+    margin-top: 20px;
+    background-color: #1976d2;
+    color: #fff;
+  }
+  
+  .MuiButton-root:hover {
+    background-color: #115293;
+  }
+  

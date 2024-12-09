@@ -1,81 +1,190 @@
-/* Center content and add a gradient background */
+/* Updated Home.css for Rich UI */
+
 .home-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(to right, #e0dae6, #41587f);
+  padding: 20px;
+  background-color: #f0f2f5;
 }
 
-/* Card-style layout for image and buttons */
-.home-card {
-  background-color: white;
-  padding: 25px;
-  border-radius: 80px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+.hero-section {
   text-align: center;
-  max-width: 800px;
-  width: 100%;
+  margin-bottom: 50px;
 }
 
-/* Add a modern font style, shadow, and padding for the title */
 .home-title {
-  font-family: 'Arial', sans-serif;
-  font-size: 36px;
-  font-weight: bold;
-  color: #000000;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-  margin-bottom: 20px;
+  font-size: 2.75rem;
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
-/* Ensure the image is responsive */
-.home-image {
+.home-subtitle {
+  font-size: 1.35rem;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+.hero-image {
   width: 100%;
   max-width: 500px;
-  height: auto;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
-/* Button styles with rounded corners, hover effects, and animations */
 .home-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+  margin-top: 30px;
 }
 
 .home-button {
-  padding: 12px 30px;
-  font-size: 18px;
-  font-weight: bold;
-  color: white;
-  background-color: #19191a;
+  padding: 12px 25px;
+  margin: 0 15px;
   border: none;
-  border-radius: 50px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.home-button:hover {
-  background-color: #84d671;
-  transform: scale(1.05);
+.primary {
+  background-color: #3498db;
+  color: white;
 }
 
-/* Add a smooth animation effect to make the buttons pop */
-.home-button:active {
-  transform: scale(0.98);
+.primary:hover {
+  background-color: #2980b9;
 }
 
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-  .home-card {
-    padding: 20px;
-  }
-  
-  .home-title {
-    font-size: 28px;
-  }
-  
-  .home-button {
-    font-size: 16px;
-  }
+.secondary {
+  background-color: #ecf0f1;
+  color: #333;
 }
+
+.secondary:hover {
+  background-color: #bdc3c7;
+}
+
+.features-section, .how-it-works-section {
+  width: 100%;
+  max-width: 900px;
+  margin: 50px 0;
+  text-align: center;
+  color: #34495e;
+}
+
+.feature-cards, .steps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.feature-card, .step {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.feature-card:hover, .step:hover {
+  transform: translateY(-5px);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 60px;
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #007bff;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  max-width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+}
+
+.nav-menu a {
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffcc00;
+  transform: translateY(-3px);
+}
+
+.nav-button {
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #ffcc00;
+}
+
+/* Social Media Section */
+.social-media {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 20px;
+}
+
+.social-media a {
+  color: inherit;
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #007bff;
+}
+
+/* <Button color="inherit" onClick={handleRegister}>Register</Button>
+<Button color="inherit" onClick={handleLogin}>Login</Button> */
+
+/* import './Home.css';
+
+const Home = () => {
+  const navigate = useNavigate();
+
+  const handleRegister = () => {
+    navigate('/register');
+  };
+
+  const handleLogin = () => {
+    navigate('/login');
+  }; */

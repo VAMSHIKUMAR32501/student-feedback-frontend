@@ -6,18 +6,31 @@
 
 .search-input {
   width: 300px;
-  padding: 8px;
+  padding: 10px; /* Increased padding for a better touch target */
   border-radius: 4px;
   border: 1px solid #ccc;
+  font-size: 16px; /* Larger font size for better readability */
+}
+
+.new-year-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds spacing between the inputs and the button */
 }
 
 .add-btn {
   background-color: #007bff;
   color: white;
-  padding: 8px 16px;
+  padding: 10px 20px; /* Increased padding for a better button */
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-size: 16px; /* Larger font size for better readability */
+}
+
+.add-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
 }
 
 .academic-year-table {
@@ -26,58 +39,108 @@
   margin-top: 20px;
 }
 
-.academic-year-table th, .academic-year-table td {
+.academic-year-table th,
+.academic-year-table td {
   padding: 12px;
   border: 1px solid #ddd;
   text-align: center;
 }
 
-.default-btn {
-  padding: 6px 12px;
-  border: none;
-  border-radius: 4px;
-  color: white;
-}
-
-.default-btn.yes {
-  background-color: #28a745;
-}
-
-.default-btn.no {
-  background-color: #6c757d;
-}
-
 .status-badge {
-  padding: 6px 12px;
+  padding: 8px 14px; /* Increased padding for better visibility */
   border-radius: 12px;
+  color: black; /* Black text for better visibility */
+  display: inline-block; /* Ensure visibility */
+  font-weight: bold; /* Make text bold */
+}
+
+/* System Default Styles */
+.system-default-yes {
+  background-color: #4ec269; /* Green for Yes */
+}
+
+.system-default-no {
+  background-color: #6c757d; /* Grey for No */
+}
+
+/* Evaluation Status Styles */
+.evaluation-status-pending {
+  background-color: #ffc107; /* Yellow for Pending */
+  color: black; /* Use black for better contrast */
+}
+
+.evaluation-status-going {
+  background-color: #28a745; /* Green for Going or On-going */
   color: white;
 }
 
-.status-badge.starting {
-  background-color: #28a745;
-}
-
-.status-badge.closed {
-  background-color: #dc3545;
-}
-
-.status-badge.not-yet-started {
-  background-color: #ffc107;
-}
-
-.update-btn, .delete-btn {
-  padding: 6px 12px;
+/* Button Styles */
+.update-btn,
+.delete-btn {
+  padding: 8px 14px; /* Increased padding for better touch target */
   border: none;
   border-radius: 4px;
   color: white;
   cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 .update-btn {
-  background-color: #17a2b8;
+  background-color: #17a2b8; /* Teal for update */
+}
+
+.update-btn:hover {
+  background-color: #138496; /* Darker teal on hover */
 }
 
 .delete-btn {
-  background-color: #dc3545;
+  background-color: #dc3545; /* Red for delete */
   margin-left: 8px;
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker red on hover */
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-box {
+  background-color: white;
+  padding: 30px; /* Increased padding for more breathing space */
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+  width: 600px; /* Width of the modal */
+  max-width: 90%; /* Ensure it doesn't exceed screen width on small devices */
+}
+
+.modal-box h2 {
+  margin-bottom: 20px; /* Add some space below the title */
+}
+
+.modal-box input {
+  width: 100%; /* Full width for the inputs */
+  padding: 12px; /* Increased padding for better appearance */
+  margin-bottom: 15px; /* Space between inputs */
+  border: 1px solid #ccc; /* Border styling */
+  border-radius: 4px; /* Rounded corners */
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-buttons button {
+  flex: 1; /* Make buttons take equal space */
+  margin: 0 5px; /* Space between buttons */
 }
