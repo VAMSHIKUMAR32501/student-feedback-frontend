@@ -5,7 +5,7 @@ import './AdminLogin.css';
 import { login } from '../../services/api'; 
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState('');
+  const [input, setInput] = useState(''); // Combined field for email/username
   const [password, setPassword] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [generatedCode, setGeneratedCode] = useState('');
@@ -27,10 +27,16 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await login({ email, password ,userType:'admin'});
+      // Pass input and password to API
+      const response = await login({ 
+        input, // Backend should handle whether it's email or username
+        password,
+        userType: 'admin'
+      });
+
       console.log('Logged in admin:', response);
 
-      // Navigate to the student dashboard if successful
+      // Navigate to the admin dashboard if successful
       navigate('/admin');
     } catch (error) {
       setError(error.message || 'Login failed. Please check your credentials.');
@@ -43,10 +49,10 @@ const AdminLogin = () => {
         <h2>Admin Login</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="email"
+            type="text" // Changed from email to text to allow both username and email
             placeholder="Username/Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             required
           />
           <input
@@ -89,10 +95,9 @@ const AdminLogin = () => {
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
 
-          {/* New Register Link */}
           <div className="register-link">
             <span>Don't have an account? </span>
-            <Link to="/register">Register</Link> {/* Link to the register page */}
+            <Link to="/register">Register</Link>
           </div>
         </form>
       </div>
