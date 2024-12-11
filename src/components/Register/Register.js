@@ -19,9 +19,9 @@ const Register = () => {
     e.preventDefault();
     setError('');
   
-    
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    // Validate inputs
+    //const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    //const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   
     if (!emailRegex.test(email)) {
       setError('Email must be a valid @gmail.com address');
