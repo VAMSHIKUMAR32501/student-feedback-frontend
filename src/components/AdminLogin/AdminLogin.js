@@ -5,7 +5,7 @@ import './AdminLogin.css';
 import { login } from '../../services/api'; 
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState('');
+  const [input, setInput] = useState('');
   const [password, setPassword] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [generatedCode, setGeneratedCode] = useState('');
@@ -27,7 +27,7 @@ const AdminLogin = () => {
     }
 
     try {
-      const response = await login({ email, password ,userType:'admin'});
+      const response = await login({ input, password ,userType:'admin'});
       console.log('Logged in admin:', response);
 
       // Navigate to the student dashboard if successful
@@ -43,10 +43,10 @@ const AdminLogin = () => {
         <h2>Admin Login</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="email"
+            type="text"
             placeholder="Username/Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
             required
           />
           <input
