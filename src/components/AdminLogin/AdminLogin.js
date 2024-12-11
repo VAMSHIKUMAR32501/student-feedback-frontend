@@ -57,6 +57,7 @@ const AdminLogin = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
+            pattern=".*"
           />
           <input
             type="password"
