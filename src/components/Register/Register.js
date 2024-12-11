@@ -20,18 +20,18 @@ const Register = () => {
     setError('');
   
     // Validate inputs
-    //const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
-    //const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
   
-    // if (!emailRegex.test(email)) {
-    //   setError('Email must be a valid @gmail.com address');
-    //   return;
-    // }
+    if (!emailRegex.test(email)) {
+      setError('Email must be a valid @gmail.com address');
+      return;
+    }
   
-    // if (!passwordRegex.test(password)) {
-    //   setError('Password must be at least 8 characters long and include an uppercase letter, a number, and a special character');
-    //   return;
-    // }
+    if (!passwordRegex.test(password)) {
+      setError('Password must be at least 8 characters long and include an uppercase letter, a number, and a special character');
+      return;
+    }
   
     if (mobile.length !== 10 || !/^\d+$/.test(mobile)) {
       setError('Mobile number must be exactly 10 digits');
