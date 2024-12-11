@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Captcha from 'react-captcha-code';
@@ -22,16 +21,25 @@ const AdminLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
     if (captchaCode !== generatedCode) {
       setCaptchaError(true);
       return;
     }
 
+    // Check for fixed admin credentials
+    if (email === 'admin' && password === 'admin') {
+      console.log('Logged in with fixed admin credentials');
+      navigate('/admin');
+      return;
+    }
+
+    // Proceed with API login for other cases
     try {
-      const response = await login({ email, password ,userType:'admin'});
+      const response = await login({ email, password, userType: 'admin' });
       console.log('Logged in admin:', response);
 
-      // Navigate to the student dashboard if successful
+      // Navigate to the admin dashboard if successful
       navigate('/admin');
     } catch (error) {
       setError(error.message || 'Login failed. Please check your credentials.');
@@ -93,7 +101,7 @@ const AdminLogin = () => {
           {/* New Register Link */}
           <div className="register-link">
             <span>Don't have an account? </span>
-            <Link to="/register">Register</Link> {/* Link to the register page */}
+            <Link to="/register">Register</Link>
           </div>
         </form>
       </div>
@@ -102,5 +110,3 @@ const AdminLogin = () => {
 };
 
 export default AdminLogin;
-
-
