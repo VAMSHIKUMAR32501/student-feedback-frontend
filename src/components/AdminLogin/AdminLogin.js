@@ -25,7 +25,7 @@ const AdminLogin = () => {
       setCaptchaError(true);
       return;
     }
-    if (email === 'admin' && password === 'admin') {
+    if (input === 'admin' && password === 'admin') {
       console.log('Logged in admin:', response);
       navigate('/admin');
       return;
