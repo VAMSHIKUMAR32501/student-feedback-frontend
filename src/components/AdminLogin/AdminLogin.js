@@ -5,7 +5,7 @@ import './AdminLogin.css';
 import { login } from '../../services/api'; 
 
 const AdminLogin = () => {
-  const [input, setInput] = useState(''); // Combined field for email/username
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [generatedCode, setGeneratedCode] = useState('');
@@ -21,24 +21,22 @@ const AdminLogin = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    
     if (captchaCode !== generatedCode) {
       setCaptchaError(true);
       return;
     }
-    if (input === 'admin' && password === 'admin') {
-      console.log('Logged in admin:', response);
+
+    // Check for fixed admin credentials
+    if (email === 'admin' && password === 'admin') {
+      console.log('Logged in with fixed admin credentials');
       navigate('/admin');
       return;
     }
 
+    // Proceed with API login for other cases
     try {
-      // Pass input and password to API
-      const response = await login({ 
-        input, // Backend should handle whether it's email or username
-        password,
-        userType: 'admin'
-      });
-
+      const response = await login({ email, password, userType: 'admin' });
       console.log('Logged in admin:', response);
 
       // Navigate to the admin dashboard if successful
@@ -54,12 +52,11 @@ const AdminLogin = () => {
         <h2>Admin Login</h2>
         <form onSubmit={handleLogin}>
           <input
-            type="text" // Changed from email to text to allow both username and email
+            type="text" // Changed type from "email" to "text"
             placeholder="Username/Email"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
-            pattern=".*"
           />
           <input
             type="password"
@@ -101,6 +98,7 @@ const AdminLogin = () => {
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
 
+          {/* New Register Link */}
           <div className="register-link">
             <span>Don't have an account? </span>
             <Link to="/register">Register</Link>
