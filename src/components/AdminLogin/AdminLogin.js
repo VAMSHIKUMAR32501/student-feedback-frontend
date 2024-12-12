@@ -26,25 +26,26 @@ const AdminLogin = () => {
       setCaptchaError(true);
       return;
     }
-
+  
     // Check for fixed admin credentials
     if (email === 'admin' && password === 'admin') {
       console.log('Logged in with fixed admin credentials');
       navigate('/admin');
       return;
     }
-
+  
     // Proceed with API login for other cases
     try {
-      const response = await login({ email, password, userType: 'admin' });
-      console.log('Logged in admin:', response);
-
+      const apiResponse = await login({ email, password, userType: 'admin' }); // Renamed response to apiResponse
+      console.log('Logged in admin:', apiResponse);
+  
       // Navigate to the admin dashboard if successful
       navigate('/admin');
     } catch (error) {
       setError(error.message || 'Login failed. Please check your credentials.');
     }
   };
+  
 
   return (
     <div className="login-container">
