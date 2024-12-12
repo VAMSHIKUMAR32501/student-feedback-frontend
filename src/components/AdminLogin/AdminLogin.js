@@ -5,7 +5,7 @@ import './AdminLogin.css';
 import { login } from '../../services/api'; 
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState('');
+  const [input, setInput] = useState('');
   const [password, setPassword] = useState('');
   const [captchaCode, setCaptchaCode] = useState('');
   const [generatedCode, setGeneratedCode] = useState('');
@@ -27,16 +27,16 @@ const AdminLogin = () => {
       return;
     }
   
-    // Check for fixed admin credentials
-    if (email === 'admin' && password === 'admin') {
-      console.log('Logged in with fixed admin credentials');
-      navigate('/admin');
-      return;
-    }
+  
+    // if (email === 'admin' && password === 'admin') {
+    //   console.log('Logged in with fixed admin credentials');
+    //   navigate('/admin');
+    //   return;
+    // }
   
     // Proceed with API login for other cases
     try {
-      const apiResponse = await login({ email, password, userType: 'admin' }); // Renamed response to apiResponse
+      const apiResponse = await login({ input, password, userType: 'admin' }); // Renamed response to apiResponse
       console.log('Logged in admin:', apiResponse);
   
       // Navigate to the admin dashboard if successful
@@ -56,7 +56,7 @@ const AdminLogin = () => {
             type="text" // Changed type from "email" to "text"
             placeholder="Username/Email"
             value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => setInput(e.target.value)}
             required
           />
           <input
