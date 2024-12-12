@@ -36,8 +36,8 @@ const AdminLogin = () => {
   
     // Proceed with API login for other cases
     try {
-      const apiResponse = await login({ input, password, userType: 'admin' }); // Renamed response to apiResponse
-      console.log('Logged in admin:', apiResponse);
+      const response = await login({ input, password, userType: 'admin' }); 
+      console.log('Logged in admin:', response);
   
       // Navigate to the admin dashboard if successful
       navigate('/admin');
